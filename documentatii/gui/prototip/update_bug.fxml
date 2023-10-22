@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="449.0" prefWidth="535.0" spacing="20.0" styleClass="linear-grad1" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bugmanager.controllers.UpdateBugController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="5.0" />
+    </padding>
+   <Label text="Id">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <TextField fx:id="idTextField" />
+   <Label text="Name">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <TextField fx:id="nameTextField" />
+   <Label text="Status">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <ChoiceBox fx:id="statusChoiceBox" prefHeight="25.0" prefWidth="620.0" />
+   <Label text="Description">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <TextArea fx:id="descriptionTextArea" prefHeight="219.0" prefWidth="538.0" />
+    <Button onAction="#onUpdateButtonClick" styleClass="linear-grad2" stylesheets="@style.css" text="Update Bug" />
+   <Button onAction="#onBackButtonClick" styleClass="linear-grad2" stylesheets="@style.css" text="Back" />
+</VBox>

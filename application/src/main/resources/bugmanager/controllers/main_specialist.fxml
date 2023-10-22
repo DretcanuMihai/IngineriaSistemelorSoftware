@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="466.0" prefWidth="755.0" spacing="20.0" styleClass="linear-grad1" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bugmanager.controllers.SpecialistController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Bugs">
+      <font>
+         <Font size="24.0" />
+      </font></Label>
+   <HBox alignment="CENTER" prefHeight="433.0" prefWidth="789.0" spacing="20.0">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      <TableView fx:id="bugTableView" prefHeight="217.0" prefWidth="976.0">
+         <columns>
+            <TableColumn fx:id="bugIdColumn" prefWidth="88.0" text="ID" />
+            <TableColumn fx:id="bugNameColumn" prefWidth="162.0" text="Name" />
+            <TableColumn fx:id="bugDescriptionColumn" prefWidth="121.0" text="Description" />
+            <TableColumn fx:id="bugStatusColumn" prefWidth="97.0" text="Status" />
+         </columns>
+      </TableView>
+      <VBox alignment="CENTER" prefHeight="395.0" prefWidth="716.0" spacing="20.0" stylesheets="@style.css">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <Label prefHeight="30.0" prefWidth="107.0" text="Description">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <TextArea fx:id="descriptionTextArea" prefHeight="251.0" prefWidth="158.0" />
+      </VBox>
+   </HBox>
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
+      <Button fx:id="actionButton" mnemonicParsing="false" onAction="#onActionButtonClick" styleClass="linear-grad2" text="Action Bug">
+         <HBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </HBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#onUpdateButtonClick" styleClass="linear-grad2" text="Update Bug">
+         <HBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </HBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#onLogoutButtonClick" styleClass="linear-grad2" text="Logout">
+         <HBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
+</VBox>
